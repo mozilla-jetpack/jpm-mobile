@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+var path = require("path");
+var program = require("commander");
+var VERSION = require("../package.json").version;
+var run = require("../lib/run").run;
+var cwd = process.cwd();
+
+program
+  .version(VERSION)
+  .option("--adb <path>", "Path to adb.")
+  .option("-v, --verbose", "More verbose logging to stdout.");
+
+program
+  .command("run")
+  .description("Install and run in Firefox the current addon")
+  .action(function () {
+    var manifest = require(path.join(cwd, "package.json"))
+    run(manifest, program).then(null, console.error);
+  });
+
+program.parse(process.argv);
+

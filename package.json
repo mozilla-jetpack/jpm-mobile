@@ -1,0 +1,16 @@
+{
+  "name": "jpm-mobile",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Erik Vold",
+  "bin": {
+    "jpm-mobile": "./bin/jpm-mobile"
+  },
+  "dependencies": {
+    "bluebird": "2.9.24",
+    "commander": "2.6.0",
+    "dive": "0.4.0",
+    "jpm": "1.0.0"
+  }
+}
