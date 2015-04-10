@@ -14,11 +14,28 @@ program
 
 program
   .command("run")
-  .description("Install and run in Firefox the current addon")
+  .description("Install and run the current addon in Firefox for Mobile.")
+  .action(function () {
+    var manifest = require(path.join(cwd, "package.json"));
+    run(manifest, makeOptions(program, "run")).then(null, console.error);
+  });
+
+program
+  .command("test")
+  .description("Install, run, and test the current addon in Firefox for Mobile.")
   .action(function () {
     var manifest = require(path.join(cwd, "package.json"))
-    run(manifest, program).then(null, console.error);
+    run(manifest, makeOptions(program, "test")).then(null, console.error);
   });
+
+function makeOptions(program, command) {
+  return {
+    command: command,
+    adb: program.adb,
+    binary: program.binary,
+    verbose: program.verbose
+  };
+}
 
 program.parse(process.argv);
 

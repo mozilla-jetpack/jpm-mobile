@@ -2,7 +2,7 @@
 
 ## Usage
 
-`jpm-mobile` will have two commands: `run` (which currently works) and `test` (not yet implemented) with details below. Some options are:
+`jpm-mobile` will have two commands: `run` and `test` with details below. Some options are:
 
 * `--adb <path>` Path to adb..
 * `-b, --binary <name>` Name of Firefox binary to use (ex: nightly, beta, firefox).
@@ -10,4 +10,10 @@
 
 # Example
 
-    jpm-mobile run --adb /path/to/adb -b nightly -v
+## Running An Add-on
+
+    jpm-mobile run --adb /path/to/adb
+
+## Test An Add-on
+
+    jpm-mobile test --adb /path/to/adb
