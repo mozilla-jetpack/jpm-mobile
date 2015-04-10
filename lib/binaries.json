@@ -1,0 +1,6 @@
+{
+  "nightly": "fennec",
+  "aurora": "fennec_aurora",
+  "beta": "firefox_beta",
+  "release": "firefox"
+}
