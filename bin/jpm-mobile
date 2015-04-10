@@ -9,8 +9,8 @@ var cwd = process.cwd();
 program
   .version(VERSION)
   .option("--adb <path>", "Path to adb.")
-  .option("-v, --verbose", "More verbose logging to stdout.")
-  .option("-b, --binary <name>", "Name of Firefox binary to use (ex: nightly, beta, firefox).");
+  .option("-b, --binary <name>", "Name of Firefox binary to use (ex: nightly, beta, firefox).")
+  .option("-v, --verbose", "More verbose logging to stdout.");
 
 program
   .command("run")

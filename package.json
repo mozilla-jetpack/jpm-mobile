@@ -7,6 +7,14 @@
   "bin": {
     "jpm-mobile": "./bin/jpm-mobile"
   },
+  "homepage": "https://github.com/erikvold/jpm-mobile",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/erikvold/jpm-mobile.git"
+  },
+  "bugs": {
+    "url": "http://github.com/erikvold/jpm-mobile/issues"
+  },
   "dependencies": {
     "bluebird": "2.9.24",
     "commander": "2.6.0",
