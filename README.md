@@ -7,3 +7,7 @@
 * `--adb <path>` Path to adb..
 * `-b, --binary <name>` Name of Firefox binary to use (ex: nightly, beta, firefox).
 * `-v, --verbose` Prints additional debugging information.
+
+# Example
+
+    jpm-mobile run --adb /path/to/adb -b nightly -v
