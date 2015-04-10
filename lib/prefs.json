@@ -1,0 +1,19 @@
+{
+  "extensions.sdk.console.logLevel": "info",
+  "extensions.installDistroAddons": false,
+  "lightweightThemes.update.enabled": false,
+  "app.releaseNotesURL": "http://localhost/app-dummy/",
+  "javascript.options.showInConsole": true,
+  "extensions.update.enabled": false,
+  "extensions.checkCompatibility.nightly": false,
+  "app.vendorURL": "http://localhost/app-dummy/",
+  "devtools.debugger.remote-enabled": true,
+  "extensions.update.notifyUser": false,
+  "browser.displayedE10SPrompt.1": 5,
+  "extensions.getAddons.cache.enabled": false,
+  "browser.firstrun.show.uidiscovery": false,
+  "browser.console.showInPanel": true,
+  "browser.dom.window.dump.enabled": true,
+  "extensions.enabledScopes": 5,
+  "extensions.autoDisableScopes": 10
+}
