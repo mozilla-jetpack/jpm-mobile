@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "author": "Erik Vold",
+  "license": "MPL v2.0",
   "bin": {
     "jpm-mobile": "./bin/jpm-mobile"
   },
