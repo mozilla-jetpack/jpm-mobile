@@ -1,5 +1,4 @@
 language: android
-jdk: oraclejdk7
 android:
   components:
     # Uncomment the lines below if you want to
@@ -11,11 +10,7 @@ android:
     - android-17
 
     # Specify system image,
-    - sys-img-armeabi-v7a-android-19
-
-    # Additional components
-    - add-on
-    - extra
+    - sys-img-armea
 
 # Emulator Management: Create, Start and Wait
 before_script:
