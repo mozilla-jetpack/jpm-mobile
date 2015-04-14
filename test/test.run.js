@@ -5,7 +5,9 @@
 
 var path = require("path");
 var fs = require("fs");
+var child_process = require("child_process");
 var Promise = require("bluebird");
+var extend = require("lodash").extend;
 
 var jpm = require.resolve("../bin/jpm-mobile");
 var simpleExample = path.join(__dirname, "..", "examples", "simple");
@@ -26,7 +28,7 @@ describe("jpm run", function () {
 
 function spawn (cmd, options) {
   options = options || {};
-  var env = _.extend({}, options.env, process.env);
+  var env = extend({}, options.env, process.env);
 
   return child_process.spawn("node", [
     jpm, cmd, "-v",
