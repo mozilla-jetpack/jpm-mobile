@@ -17,7 +17,7 @@ android:
 before_script:
   # Make a fake sd card
   - mkdir sdcard
-  - mksdcard -l jetpackSdCard 100M sdcard/jetpacksdcard.img
+  - mksdcard -l jetpackSdCard 1024M sdcard/jetpacksdcard.img
   # Create the emulator
   - echo no | android create avd --force -n jetpack -t android-17 --abi armeabi-v7a
   # Start the emulator
