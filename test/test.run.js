@@ -3,7 +3,6 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 "use strict";
 
-var utils = require("./utils");
 var path = require("path");
 var fs = require("fs");
 
@@ -11,7 +10,6 @@ var jpm = require.resolve("../bin/jpm-mobile");
 var simpleExample = path.join(__dirname, "..", "examples", "simple");
 
 var binary = process.env.JPM_FIREFOX_BINARY || "fennec";  // fennec is nightly
-var filterPattern = readParam("filter");
 
 describe("jpm run", function () {
   it("simple example", function (done) {
