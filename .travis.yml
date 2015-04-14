@@ -25,21 +25,6 @@ android:
 
 # Emulator Management: Create, Start and Wait
 before_script:
-  # Make a fake sd card
-  - mkdir sdcard
-  - mksdcard -l jetpackSdCard 100M sdcard/jetpacksdcard.img
-  # Create the emulator
-  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
-  # Start the emulator
-  - emulator -avd test -sdcard sdcard/jetpacksdcard.img -no-skin -no-audio -no-window &
-  # Wait for the emulator to start
-  - android-wait-for-emulator
-  - adb shell input keyevent 82 &
-  - wget -O fennec.apk https://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mozilla-central-android-api-11/fennec-40.0a1.multi.android-arm.apk
-  - adb install fennec.apk
-  - npm install
-  - npm install jpm -g
-  - cd examples/simple
   - which adb
 
 
