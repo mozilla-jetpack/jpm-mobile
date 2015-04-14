@@ -34,3 +34,6 @@ before_script:
   - npm install
   - export JPM_FIREFOX_BINARY=fennec
   - export JPM_ADB_PATH=/usr/local/android-sdk/platform-tools/adb
+
+script:
+  - npm test
