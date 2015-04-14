@@ -5,6 +5,7 @@
 
 var path = require("path");
 var fs = require("fs");
+var Promise = require("bluebird");
 
 var jpm = require.resolve("../bin/jpm-mobile");
 var simpleExample = path.join(__dirname, "..", "examples", "simple");
@@ -18,7 +19,7 @@ describe("jpm run", function () {
     var options = {
       cwd: simpleExample
     };
-    jpm("run", options, process).then(done);
+    run("run", options, process).then(done);
   });
 });
 
@@ -38,7 +39,7 @@ function spawn (cmd, options) {
   });
 }
 
-function jpm (cmd, options) {
+function run (cmd, options) {
   return new Promise(function(resolve) {
     var output = [];
     var proc = spawn(cmd, options);
