@@ -11,7 +11,7 @@ android:
     - android-17
 
     # Specify system image,
-    - sys-img-armeabi-v7a-android-
+    - sys-img-armeabi-v7a-android-19
 
     # Additional components
     - add-on
@@ -37,7 +37,5 @@ before_script:
   - adb install fennec.apk
   # Install dependencies
   - npm install
-
-script:
-  - cd examples/simple
-  - node ../../bin/jpm-mobile test --adb /usr/local/android-sdk/platform-tools/adb -v -b fennec
+  - export JPM_FIREFOX_BINARY=fennec
+  - export JPM_ADB_PATH=/usr/local/android-sdk/platform-tools/adb

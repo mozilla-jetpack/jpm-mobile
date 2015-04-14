@@ -8,6 +8,9 @@
   "bin": {
     "jpm-mobile": "./bin/jpm-mobile"
   },
+  "scripts": {
+    "test": "node ./test/run.js"
+  },
   "homepage": "https://github.com/erikvold/jpm-mobile",
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
     "dive": "0.4.0",
     "fs-extra": "0.16.4",
     "jetpack-id": "0.0.4",
-    "jpm": "1.0.0"
+    "jpm": "1.0.0",
+    "mocha": "2.2.1"
   }
 }
