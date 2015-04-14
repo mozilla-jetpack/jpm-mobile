@@ -6,22 +6,11 @@ android:
     - platform-tools
     - tools
 
-    # The BuildTools version used by your project
-    - build-tools-19.1.0
-
     # The SDK version used to compile your project
-    - android-19
+    - android-17
 
-    # Additional components
-    - extra-google-google_play_services
-    - extra-google-m2repository
-    - extra-android-m2repository
-    - addon-google_apis-google-19
-
-    # Specify at least one system image,
-    # if you need to run emulator(s) during your tests
+    # Specify system image,
     - sys-img-armeabi-v7a-android-19
-    - sys-img-x86-android-17
 
 # Emulator Management: Create, Start and Wait
 before_script:
@@ -29,9 +18,9 @@ before_script:
   - mkdir sdcard
   - mksdcard -l jetpackSdCard 100M sdcard/jetpacksdcard.img
   # Create the emulator
-  - echo no | android create avd --force -n test -t android-19 --abi armeabi-v7a
+  - echo no | android create avd --force -n jetpack -t android-17 --abi armeabi-v7a
   # Start the emulator
-  - emulator -avd test -sdcard sdcard/jetpacksdcard.img -no-skin -no-audio -no-window &
+  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-skin -no-audio -no-window &
   # Wait for the emulator to start
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
