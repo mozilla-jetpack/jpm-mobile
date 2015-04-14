@@ -11,7 +11,11 @@ android:
     - android-17
 
     # Specify system image,
-    - sys-img-armeabi-v7a-android-19
+    - sys-img-armeabi-v7a-android-
+
+    # Additional components
+    - add-on
+    - extra
 
 # Emulator Management: Create, Start and Wait
 before_script:
@@ -24,10 +28,14 @@ before_script:
   - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-audio -no-window -gpu on -no-boot-anim -noskin &
   # Wait for the emulator to start
   - android-wait-for-emulator
+  # Unlock the emulator
   - adb shell input keyevent 82 &
   - adb shell input keyevent 82 &
+  # Download nightly
   - wget -O fennec.apk https://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mozilla-central-android-api-11/fennec-40.0a1.multi.android-arm.apk
+  # Install Nightly
   - adb install fennec.apk
+  # Install dependencies
   - npm install
 
 script:
