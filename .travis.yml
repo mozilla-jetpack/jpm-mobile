@@ -21,7 +21,7 @@ before_script:
   # Create the emulator
   - echo no | android create avd --force -n jetpack -t android-17 --abi armeabi-v7a
   # Start the emulator
-  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-skin -no-audio &
+  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-skin -no-audio -no-window -gpu on &
   # Wait for the emulator to start
   - android-wait-for-emulator
   - adb shell input keyevent 82 &
