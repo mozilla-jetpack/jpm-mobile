@@ -1,0 +1,14 @@
+{
+  "name": "simple-addon",
+  "title": "simple-addon",
+  "id": "simple-addon@erikvold.com",
+  "description": "a simple add-on",
+  "author": "",
+  "license": "MPL 2.0",
+  "version": "0.1.0",
+  "main": "./lib/main",
+  "engines": {
+    "fennec": "*",
+    "firefox": "*"
+  }
+}
