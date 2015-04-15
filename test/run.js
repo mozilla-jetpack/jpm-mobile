@@ -7,7 +7,7 @@ var Mocha = require("mocha");
 var mocha = new Mocha({
   ui: "bdd",
   reporter: "spec",
-  timeout: 20000
+  timeout: 200000
 });
 
 [
