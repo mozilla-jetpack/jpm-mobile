@@ -16,6 +16,7 @@ android:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+  - cd /tmp
   # Make a fake sd card
   - mkdir sdcard
   - mksdcard -l jetpackSdCard 1024M sdcard/jpmsdcard.img
@@ -32,6 +33,7 @@ before_script:
   - wget -O fennec.apk https://ftp.mozilla.org/pub/mozilla.org/mobile/nightly/latest-mozilla-central-android-api-11/fennec-40.0a1.multi.android-arm.apk
   # Install Nightly
   - adb install fennec.apk
+  - cd $TRAVIS_BUILD_DIR
   # Install dependencies
   - npm install
   - export JPM_FIREFOX_BINARY=fennec
