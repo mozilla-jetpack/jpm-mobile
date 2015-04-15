@@ -40,4 +40,6 @@ before_script:
   - export JPM_ADB_PATH=/usr/local/android-sdk/platform-tools/adb
 
 script:
+  - cd examples/simple
+  - node ../../bin/jpm-mobile test -v -b fennec --adb /usr/local/android-sdk/platform-tools/adb
   - npm test
