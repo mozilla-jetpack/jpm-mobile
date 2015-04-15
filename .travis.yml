@@ -14,13 +14,15 @@ android:
 
 # Emulator Management: Create, Start and Wait
 before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
   # Make a fake sd card
   - mkdir sdcard
   - mksdcard -l jetpackSdCard 1024M sdcard/jetpacksdcard.img
   # Create the emulator
   - echo no | android create avd --force -n jetpack -t android-17 --abi armeabi-v7a
   # Start the emulator
-  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-audio -no-window -gpu on -no-boot-anim -noskin &
+  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-audio -gpu on -no-boot-anim -noskin &
   # Wait for the emulator to start
   - android-wait-for-emulator
   # Unlock the emulator
