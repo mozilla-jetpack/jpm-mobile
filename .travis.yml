@@ -10,7 +10,7 @@ android:
     - android-17
 
     # Specify system image,
-    - sys-img-armea
+    - sys-img-armeabi-v7a-android-19
 
 # Emulator Management: Create, Start and Wait
 before_script:
@@ -18,11 +18,11 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   # Make a fake sd card
   - mkdir sdcard
-  - mksdcard -l jetpackSdCard 1024M sdcard/jetpacksdcard.img
+  - mksdcard -l jetpackSdCard 1024M sdcard/jpmsdcard.img
   # Create the emulator
-  - echo no | android create avd --force -n jetpack -t android-17 --abi armeabi-v7a
+  - echo no | android create avd --force -n jpm -t android-17 --abi armeabi-v7a
   # Start the emulator
-  - emulator -avd jetpack -sdcard sdcard/jetpacksdcard.img -no-audio -gpu on -no-boot-anim -noskin &
+  - emulator -avd jpm -sdcard sdcard/jetpacksdcard.img -no-audio -gpu on -no-boot-anim -noskin &
   # Wait for the emulator to start
   - android-wait-for-emulator
   # Unlock the emulator
