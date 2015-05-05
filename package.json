@@ -4,7 +4,7 @@
   "description": "Uses JPM with ADB in order to run Jetpacks on an Android device.",
   "main": "index.js",
   "author": "Erik Vold",
-  "license": "MPL v2.0",
+  "license": "MPL-2.0",
   "bin": {
     "jpm-mobile": "./bin/jpm-mobile"
   },
