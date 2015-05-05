@@ -1,4 +1,4 @@
-# jpm-mobile
+# jpm-mobile [![Dependency Status](https://david-dm.org/erikvold/jpm-mobile.png)](https://david-dm.org/erikvold/jpm-mobile)
 
 ## Usage
 

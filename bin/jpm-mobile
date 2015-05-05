@@ -13,6 +13,13 @@ program
   .option("-v, --verbose", "More verbose logging to stdout.");
 
 program
+  .command("docs")
+  .description("Open the jpm-mobile documentation on MDN.")
+  .action(function() {
+    open("https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm-mobile")
+  });
+
+program
   .command("run")
   .description("Install and run the current addon in Firefox for Mobile.")
   .action(function () {
@@ -38,4 +45,9 @@ function makeOptions(program, command) {
 }
 
 program.parse(process.argv);
+
+// If no command (run, xpi, init, etc.) specified, display basic help
+if (cmd.isEmptyCommand(program)) {
+  program.help();
+}
 
