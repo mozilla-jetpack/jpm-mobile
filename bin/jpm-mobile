@@ -37,6 +37,11 @@ program
   });
 
 function makeOptions(program, command) {
+  if (!program.adb) {
+    // If not specified given explicitly, fish the path to adb from the
+    // environment using the UNIX-which-like which package.
+    program.adb = require('which').sync('adb')
+  }
   return {
     command: command,
     adb: program.adb,
