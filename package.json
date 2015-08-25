@@ -11,10 +11,10 @@
   "homepage": "https://github.com/erikvold/jpm-mobile",
   "repository": {
     "type": "git",
-    "url": "git://github.com/erikvold/jpm-mobile.git"
+    "url": "git://github.com/mozilla-jetpack/jpm-mobile.git"
   },
   "bugs": {
-    "url": "http://github.com/erikvold/jpm-mobile/issues"
+    "url": "http://github.com/mozilla-jetpack/jpm-mobile/issues"
   },
   "dependencies": {
     "bluebird": "2.9.24",
