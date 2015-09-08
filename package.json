@@ -1,6 +1,6 @@
 {
   "name": "jpm-mobile",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Uses JPM with ADB in order to run Jetpacks on an Android device.",
   "main": "index.js",
   "author": "Erik Vold",
@@ -8,7 +8,7 @@
   "bin": {
     "jpm-mobile": "./bin/jpm-mobile"
   },
-  "homepage": "https://github.com/erikvold/jpm-mobile",
+  "homepage": "https://github.com/mozilla-jetpack/jpm-mobile",
   "repository": {
     "type": "git",
     "url": "git://github.com/mozilla-jetpack/jpm-mobile.git"

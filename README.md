@@ -1,4 +1,4 @@
-# jpm-mobile [![Dependency Status](https://david-dm.org/erikvold/jpm-mobile.png)](https://david-dm.org/erikvold/jpm-mobile)
+# jpm-mobile [![Dependency Status](https://david-dm.org/mozilla-jetpack/jpm-mobile.png)](https://david-dm.org/mozilla-jetpack/jpm-mobile)
 
 ## Usage
 
