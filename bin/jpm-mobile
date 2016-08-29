@@ -3,6 +3,7 @@
 var path = require("path");
 var program = require("commander");
 var VERSION = require("../package.json").version;
+var cmd = require("jpm/lib/cmd");
 var run = require("../lib/run").run;
 var cwd = process.cwd();
 
@@ -24,7 +25,7 @@ program
   .description("Install and run the current addon in Firefox for Mobile.")
   .action(function () {
     var manifest = require(path.join(cwd, "package.json"));
-    run(manifest, makeOptions(program, "run")).then(null, console.error);
+    run(manifest, makeOptions(program, "run"))
   });
 
 program
@@ -32,10 +33,15 @@ program
   .description("Install, run, and test the current addon in Firefox for Mobile.")
   .action(function () {
     var manifest = require(path.join(cwd, "package.json"))
-    run(manifest, makeOptions(program, "test")).then(null, console.error);
+    run(manifest, makeOptions(program, "test"))
   });
 
 function makeOptions(program, command) {
+  if (!program.adb) {
+    // If not specified given explicitly, fish the path to adb from the
+    // environment using the UNIX-which-like which package.
+    program.adb = require('which').sync('adb')
+  }
   return {
     command: command,
     adb: program.adb,
